@@ -12,6 +12,66 @@
   border-bottom: 2px solid grey;
 }
 
+.country-flag {
+  background: url("https://s3-us-west-2.amazonaws.com/reuters.medals-widget/flags.png")
+      no-repeat 0 0,
+    white;
+  width: 28px;
+  height: 17px;
+}
+
+.country-flag.AUT {
+  background-position: 0 0;
+}
+
+.country-flag.BLR {
+  background-position: 0 calc(-1 * 17px);
+}
+
+.country-flag.CAN {
+  background-position: 0 calc(-2 * 17px);
+}
+
+.country-flag.CHN {
+  background-position: 0 calc(-3 * 17px);
+}
+
+.country-flag.FRA {
+  background-position: 0 calc(-4 * 17px);
+}
+
+.country-flag.GER {
+  background-position: 0 calc(-5 * 17px);
+}
+
+.country-flag.ITA {
+  background-position: 0 calc(-6 * 17px);
+}
+
+.country-flag.NED {
+  background-position: 0 calc(-7 * 17px);
+}
+
+.country-flag.NOR {
+  background-position: 0 calc(-8 * 17px);
+}
+
+.country-flag.RUS {
+  background-position: 0 calc(-9 * 17px);
+}
+
+.country-flag.SUI {
+  background-position: 0 calc(-10 * 17px);
+}
+
+.country-flag.SWE {
+  background-position: 0 calc(-11 * 17px);
+}
+
+.country-flag.USA {
+  background-position: 0 calc(-12 * 17px);
+}
+
 .medal-country {
   width: 100px;
 }

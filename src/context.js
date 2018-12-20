@@ -75,7 +75,9 @@ export class Provider extends Component {
         this.setState({
           countries: sortedCountries(response.data, this.state.sortedBy)
         })
-      );
+      ).catch(error => {
+        console.log("error: ", error);
+      });
   }
 
   render() {

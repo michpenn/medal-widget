@@ -7,13 +7,12 @@ class Country extends Component {
     const { index } = this.props;
     const total = gold + silver + bronze;
 
-    const imageSource = `/images/flags/${code}.png`;
     return (
       <React.Fragment>
         <tr>
           <td>{index + 1}</td>
           <td>
-            <img src={imageSource} alt={code} />
+            <div className={"country-flag " + code} />
           </td>
           <td className="text-uppercase font-weight-bold">
             <div className="medal-country">{code}</div>
