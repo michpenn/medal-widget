@@ -11,15 +11,17 @@ class App extends Component {
     return (
       <Provider>
         <div className="App">
-          <table className="table table-sm">
-            <thead>
-              <Title name="MEDAL COUNT" />
-              <Sort />
-            </thead>
-            <tbody>
-              <Countries />
-            </tbody>
-          </table>
+          <div className="container">
+            <table className="table table-sm table-medals">
+              <thead>
+                <Title name="MEDAL COUNT" />
+                <Sort />
+              </thead>
+              <tbody>
+                <Countries />
+              </tbody>
+            </table>
+          </div>
         </div>
       </Provider>
     );

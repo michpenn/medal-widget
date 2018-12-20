@@ -1,3 +1,41 @@
+.table-medals {
+  width: auto;
+  color: grey;
+}
+
+.row-title {
+  border: 0;
+}
+
+.row-sort {
+  border-top: 0;
+  border-bottom: 2px solid grey;
+}
+
+.medal-country {
+  width: 100px;
+}
+
+.medal-count--total {
+  color: darkslategray;
+}
+
+.row-sort td {
+  border: 0;
+}
+
+.row-sort .active-filter {
+  border-top: 2px solid grey;
+}
+
+.sort-medal-title {
+  font-size: 1.2rem;
+}
+
+.sort-medal-heading {
+  cursor: pointer;
+}
+
 .sort-medal {
   border-radius: 50%;
   height: 20px;

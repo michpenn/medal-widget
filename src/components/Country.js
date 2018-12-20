@@ -2,29 +2,29 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 class Country extends Component {
-  state = {
-    display: true
-  };
   render() {
     const { code, gold, silver, bronze } = this.props.country;
     const { index } = this.props;
     const total = gold + silver + bronze;
-    const showCountry = this.state.display;
+
+    const imageSource = `/images/flags/${code}.png`;
     return (
       <React.Fragment>
-        {showCountry ? (
-          <tr>
-            <td>{index + 1}</td>
-            <td>
-              <img src="" alt="flag" />
-            </td>
-            <td className="text-uppercase">{code}</td>
-            <td>{gold}</td>
-            <td>{silver}</td>
-            <td>{bronze}</td>
-            <td>{total}</td>
-          </tr>
-        ) : null}
+        <tr>
+          <td>{index + 1}</td>
+          <td>
+            <img src={imageSource} alt={code} />
+          </td>
+          <td className="text-uppercase font-weight-bold">
+            <div className="medal-country">{code}</div>
+          </td>
+          <td className="text-center">{gold}</td>
+          <td className="text-center">{silver}</td>
+          <td className="text-center">{bronze}</td>
+          <td className="medal-count--total font-weight-bold text-center">
+            {total}
+          </td>
+        </tr>
       </React.Fragment>
     );
   }

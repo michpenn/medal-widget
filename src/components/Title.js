@@ -5,8 +5,8 @@ const Title = props => {
   const { name } = props;
   return (
     <React.Fragment>
-      <tr>
-        <td className="text-uppercase" colSpan="3">
+      <tr className="row-title">
+        <td className="text-uppercase sort-medal-title" colSpan="3">
           {name}
         </td>
       </tr>

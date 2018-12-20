@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Consumer } from "../context";
+import classnames from "classnames";
 
 class Sort extends Component {
   onClickSort(sort, dispatch) {
@@ -9,33 +10,51 @@ class Sort extends Component {
     return (
       <Consumer>
         {value => {
-          const { dispatch } = value;
+          const { dispatch, sortedBy } = value;
+
           return (
             <React.Fragment>
-              <tr>
-                <td />
-                <td />
-                <td />
-                <td>
+              <tr className="row-sort">
+                <td colSpan="3" />
+                <td
+                  className={classnames("text-center sort-medal-heading", {
+                    "active-filter": sortedBy === "gold"
+                  })}
+                >
                   <div
                     onClick={this.onClickSort.bind(this, "gold", dispatch)}
                     className="sort-medal sort-medal--gold"
                   />
                 </td>
-                <td>
+                <td
+                  className={classnames("text-center sort-medal-heading", {
+                    "active-filter": sortedBy === "silver"
+                  })}
+                >
                   <div
                     onClick={this.onClickSort.bind(this, "silver", dispatch)}
                     className="sort-medal sort-medal--silver"
                   />
                 </td>
-                <td>
+                <td
+                  className={classnames("text-center sort-medal-heading", {
+                    "active-filter": sortedBy === "bronze"
+                  })}
+                >
                   <div
                     onClick={this.onClickSort.bind(this, "bronze", dispatch)}
                     className="sort-medal sort-medal--bronze"
                   />
                 </td>
-                <td>
-                  <div onClick={this.onClickSort.bind(this, "total", dispatch)}>
+                <td
+                  className={classnames("text-center sort-medal-heading", {
+                    "active-filter": sortedBy === "total"
+                  })}
+                >
+                  <div
+                    onClick={this.onClickSort.bind(this, "total", dispatch)}
+                    className="medal-count--total font-weight-bold"
+                  >
                     TOTAL
                   </div>
                 </td>
