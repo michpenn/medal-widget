@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import Countries from "./components/Countries";
-import Title from "./components/Title";
-import Sort from "./components/Sort";
+import MedalTable from "./components/MedalTable";
 import { Provider } from "./context";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -11,17 +9,7 @@ class App extends Component {
     return (
       <Provider>
         <div className="App">
-          <div className="container">
-            <table className="table table-sm table-medals">
-              <thead>
-                <Title name="MEDAL COUNT" />
-                <Sort />
-              </thead>
-              <tbody>
-                <Countries />
-              </tbody>
-            </table>
-          </div>
+          <MedalTable />
         </div>
       </Provider>
     );
