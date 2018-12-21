@@ -6,8 +6,9 @@ import "./App.css";
 
 class App extends Component {
   render() {
+    const { initialSort } = this.props;
     return (
-      <Provider>
+      <Provider initialSort={initialSort}>
         <div className="App">
           <MedalTable />
         </div>

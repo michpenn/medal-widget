@@ -59,7 +59,7 @@ const sortedCountries = (countries, sort) => {
 
 export class Provider extends Component {
   state = {
-    sortedBy: "gold",
+    sortedBy: this.props.initialSort,
     countries: [],
     dispatch: action => {
       this.setState(state => reducer(state, action));
@@ -75,7 +75,8 @@ export class Provider extends Component {
         this.setState({
           countries: sortedCountries(response.data, this.state.sortedBy)
         })
-      ).catch(error => {
+      )
+      .catch(error => {
         console.log("error: ", error);
       });
   }
