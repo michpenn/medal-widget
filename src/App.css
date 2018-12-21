@@ -1,7 +1,10 @@
+/* table styling */
 .table-medals {
   width: auto;
   color: grey;
 }
+
+/* row styling */
 
 .row-title {
   border: 0;
@@ -10,6 +13,47 @@
 .row-sort {
   border-top: 0;
   border-bottom: 2px solid grey;
+}
+
+/* sorting row styling */
+
+.row-sort td {
+  border: 0;
+  border-top: 2px solid transparent;
+}
+
+.row-sort .active-filter {
+  border-top: 2px solid grey;
+}
+
+.sort-medal-type {
+  cursor: pointer;
+}
+
+.sort-medal {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+.sort-medal--gold {
+  background-color: #c5b358;
+}
+
+.sort-medal--silver {
+  background-color: #c0c0c0;
+}
+
+.sort-medal--bronze {
+  background-color: #cd7f32;
+}
+
+/* country row styling */
+
+.country-flag-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .country-flag {
@@ -72,44 +116,16 @@
   background-position: 0 calc(-12 * 17px);
 }
 
-.medal-country {
+.country-code {
   width: 100px;
 }
 
-.medal-count--total {
+/* text styling */
+
+.text-dark {
   color: darkslategray;
 }
 
-.row-sort td {
-  border: 0;
-}
-
-.row-sort .active-filter {
-  border-top: 2px solid grey;
-}
-
-.sort-medal-title {
+.text-title {
   font-size: 1.2rem;
-}
-
-.sort-medal-heading {
-  cursor: pointer;
-}
-
-.sort-medal {
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
-}
-
-.sort-medal--gold {
-  background-color: #c5b358;
-}
-
-.sort-medal--silver {
-  background-color: #c0c0c0;
-}
-
-.sort-medal--bronze {
-  background-color: #cd7f32;
 }

@@ -17,7 +17,7 @@ class Sort extends Component {
               <tr className="row-sort">
                 <td colSpan="3" />
                 <td
-                  className={classnames("text-center sort-medal-heading", {
+                  className={classnames("text-center sort-medal-type", {
                     "active-filter": sortedBy === "gold"
                   })}
                 >
@@ -27,7 +27,7 @@ class Sort extends Component {
                   />
                 </td>
                 <td
-                  className={classnames("text-center sort-medal-heading", {
+                  className={classnames("text-center sort-medal-type", {
                     "active-filter": sortedBy === "silver"
                   })}
                 >
@@ -37,7 +37,7 @@ class Sort extends Component {
                   />
                 </td>
                 <td
-                  className={classnames("text-center sort-medal-heading", {
+                  className={classnames("text-center sort-medal-type", {
                     "active-filter": sortedBy === "bronze"
                   })}
                 >
@@ -47,13 +47,13 @@ class Sort extends Component {
                   />
                 </td>
                 <td
-                  className={classnames("text-center sort-medal-heading", {
+                  className={classnames("text-center sort-medal-type", {
                     "active-filter": sortedBy === "total"
                   })}
                 >
                   <div
                     onClick={this.onClickSort.bind(this, "total", dispatch)}
-                    className="medal-count--total font-weight-bold"
+                    className="text-dark font-weight-bold"
                   >
                     TOTAL
                   </div>
