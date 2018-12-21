@@ -15,7 +15,11 @@
   border-bottom: 2px solid grey;
 }
 
-/* sorting row styling */
+/* header row styling */
+
+.row-title td {
+  border: 0;
+}
 
 .row-sort td {
   border: 0;

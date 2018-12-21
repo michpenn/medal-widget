@@ -4,16 +4,17 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-const widget = {
-  initalize: (elementId, sortBy = "gold") => {
+window.widget = {
+  initialize: (elementId, sortBy = "gold") => {
     return ReactDOM.render(
       <App initialSort={sortBy} />,
       document.getElementById(elementId)
     );
   }
 };
-
-widget.initalize("medal-widget", "silver");
+if (process.env.NODE_ENV === "development") {
+  window.widget.initialize("medal-widget", "silver");
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

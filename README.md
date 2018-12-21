@@ -21,6 +21,20 @@ given kind in the Olympics games. It has the following requirements:
   countries will enter and depart the top 10. The medals data should not be
   re-fetched from the server when sort changes.
 
+
+## Initializing
+
+```<div id="medal-widget"></div>
+    <script src="./build/static/js/widget.js"></script>
+    <script type="text/javascript" src="./medal-widget.js"></script>
+
+    <script type="text/javascript">
+      widget.initialize("medal-widget", "silver");
+    </script>
+  ```
+
+  Example can be seen in the `index.html` file.
+
 # More about Create React App:
 
 ## Available Scripts

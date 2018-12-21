@@ -8,8 +8,12 @@
 # testing
 /coverage
 
-# production
-/build
+# config
+/config/jest
+/config/envs.js
+/config/paths.js
+/config/webpack.config.dev.js
+/config/webpackDevServer.config.js
 
 # misc
 .DS_Store
