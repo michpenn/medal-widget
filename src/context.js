@@ -61,6 +61,8 @@ export class Provider extends Component {
   state = {
     sortedBy: this.props.initialSort,
     countries: [],
+    displayErrorWarning: false,
+    errorCode: null,
     dispatch: action => {
       this.setState(state => reducer(state, action));
     }
@@ -73,11 +75,15 @@ export class Provider extends Component {
       )
       .then(response =>
         this.setState({
-          countries: sortedCountries(response.data, this.state.sortedBy)
+          countries: sortedCountries(response.data, this.state.sortedBy),
+          errorCode: null
         })
       )
       .catch(error => {
-        console.log("error: ", error);
+        this.setState({
+          displayErrorWarning: true,
+          errorCode: error.response ? error.response.status.toString() : ""
+        });
       });
   }
 

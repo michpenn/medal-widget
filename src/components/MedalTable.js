@@ -6,7 +6,7 @@ import Sort from "./Sort";
 class MedalTable extends Component {
   render() {
     return (
-      <div className="container">
+      <React.Fragment>
         <table className="table table-sm table-medals">
           <thead>
             <Title />
@@ -16,7 +16,7 @@ class MedalTable extends Component {
             <Countries />
           </tbody>
         </table>
-      </div>
+      </React.Fragment>
     );
   }
 }

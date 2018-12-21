@@ -7,7 +7,7 @@ class Countries extends Component {
     return (
       <Consumer>
         {value => {
-          const countries = value.countries.slice(0,10);
+          const countries = value.countries.slice(0, 10);
           return (
             <React.Fragment>
               {countries.map((country, index) => (
